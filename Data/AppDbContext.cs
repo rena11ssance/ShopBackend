@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using ShopBackend.Model;
 
 namespace ShopBackend.Data
 {
@@ -11,6 +12,9 @@ namespace ShopBackend.Data
         {
             
         }
+
+        public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
